@@ -12,12 +12,15 @@ endif()
 # Подключаем директории GLFW и GLEW
 include_directories(
     ${CMAKE_SOURCE_DIR}/libs/glfw/include
-    ${CMAKE_SOURCE_DIR}/libs/glew/include
+    # ${CMAKE_SOURCE_DIR}/libs/glew/include
+    ${CMAKE_SOURCE_DIR}/include  # Добавляем нашу директорию с заголовками
 )
 
 # Создаем исполняемый файл
 add_executable(${PROJECT_NAME}
     src/main.cpp
+    src/random_variable.cpp
+    src/visualizer.cpp
 )
 
 # Линковка для Windows (MinGW)
